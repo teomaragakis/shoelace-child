@@ -1,0 +1,51 @@
+/*!
+ * Bootstrap v3.3.5 Extras by Teo Maragakis - Navigation
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+*/
+
+
+ /* Navigation menu */
+
+.navbar-default {
+  ul.submenu {
+    list-style: none;
+    li {
+      a {
+        color: @brand-success;
+      }
+      &:hover {
+        background-color: @navbar-default-link-hover-bg;
+        a {
+          text-decoration: none;
+          color: @navbar-default-link-hover-color;
+        }
+      }
+    }
+  }
+}
+
+
+ @media only screen and (min-width: 768px) {
+   ul.submenu {
+    position: absolute;
+    display: none;
+    width: 200%;
+    z-index: 999999;
+    background-color: white;
+    padding: 0px;
+    li {
+      padding: 10px 20px;
+      transition: background-color 0.3s;
+      display: list-item;
+      margin-left: 0;
+    }
+ }
+ .navbar-right ul.submenu {
+   right: 0;
+ }
+
+   .nav li:hover ul,
+   .nav li ul.submenu li {
+    display: block;
+  }
+}
